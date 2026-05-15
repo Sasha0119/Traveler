@@ -1,0 +1,113 @@
+.page-container {
+  padding-top: 100px;
+  min-height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: var(--spacing-xl);
+  padding-right: var(--spacing-xl);
+  padding-bottom: var(--spacing-2xl);
+}
+
+.hero {
+  text-align: left;
+  padding: var(--spacing-2xl) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(3rem, 10vw, 5rem);
+  font-weight: normal;
+  max-width: 900px;
+  line-height: 1.1;
+  color: white;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-top: 1rem;
+}
+
+.search-bar {
+  display: flex;
+  background: var(--surface-dark);
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  width: 100%;
+  max-width: 600px;
+  margin-top: var(--spacing-xl);
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  background: none;
+  padding: 0 var(--spacing-lg);
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--spacing-2xl);
+}
+
+/* Planner Layout */
+.planner-layout {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .planner-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.itinerary-view {
+  background: var(--surface-dark);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  border: 1px solid var(--border);
+  min-height: 600px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+.stat-value {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  color: white;
+}
+
+.stat-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
